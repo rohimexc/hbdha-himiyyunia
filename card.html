@@ -149,6 +149,9 @@
           </div>
         </div>
       </div>
+
+      <h2 class="mt-4">Clue 2</h2>
+      <h5 class="mt-1">Terinjak tempat bercahaya</h5>
     </div>
   </div>
 </div>
@@ -178,6 +181,7 @@
     const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 999 };
     const bgMusic = document.getElementById('bgMusic');
     bgMusic.currentTime = 21;
+    bgMusic.loop = true;
 
     const interval = setInterval(() => {
       const timeLeft = animationEnd - Date.now();
