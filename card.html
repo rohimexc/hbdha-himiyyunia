@@ -115,7 +115,7 @@
 
 <!-- Confetti Canvas -->
 <canvas class="confetti" id="confetti-canvas" style="display: none;"></canvas>
-
+<audio id="bgMusic" src="music.mp3" preload="auto"></audio>
 <div class="container text-center">
   <div id="secretContent" class="hidden-section">
     <div class="row justify-content-center">
@@ -176,6 +176,8 @@
     const duration = 5 * 1000;
     const animationEnd = Date.now() + duration;
     const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 999 };
+    const bgMusic = document.getElementById('bgMusic');
+    bgMusic.currentTime = 21;
 
     const interval = setInterval(() => {
       const timeLeft = animationEnd - Date.now();
@@ -207,6 +209,7 @@
 
   startHearts();
   startConfetti();
+  bgMusic.play();
   });
 
 </script>
